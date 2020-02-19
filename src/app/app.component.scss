@@ -1,0 +1,53 @@
+@import '../environment';
+
+$valid-color: white;
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+.check-block:after {
+  content: "";
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -10px;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color: $valid-color;
+}
+
+.day-checkbox > label {
+  background-color: white;
+  width: calc(50% - 3rem);
+  min-width: 140px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  &.active {
+    background-color: $primary;
+    color: $valid-color;
+    .check-block {
+      border-color: $valid-color;
+    }
+  }
+  &:hover {
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  }
+
+  .check-block {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    border: 2px solid $primary;
+    label {
+      line-height: 1.1rem;
+    }
+  }
+}
+

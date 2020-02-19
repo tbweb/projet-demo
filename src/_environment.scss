@@ -1,0 +1,11 @@
+// Custom variables
+@import "custom";
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Ths file contains only the SASS environment (variables, mixins, etc...).
+// It is used by all component files. It MUST NOT define any style.
+// All styles present in this file or the one imported by this one will be repeated as many times this file is used.
+// All the common styles must be defined in the styles.scss file.
